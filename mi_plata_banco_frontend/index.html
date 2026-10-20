@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Plata | Tu banco de confianza</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="contenedor">
+      <a href="index.html" class="logo"><span class="logo-moneda">$</span> Mi Plata</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="view/auth.html?modo=login" id="linkLogin">Iniciar Sesión</a></li>
+        <li><a href="view/auth.html?modo=registro" class="btn btn-dorado btn-sm">Registrarse</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="contenedor">
+      <h1>Tu plata, <span>segura</span> y siempre contigo</h1>
+      <p>Abre tu cuenta en minutos, haz crecer tus ahorros y maneja tu día a día sin filas ni papeleo.</p>
+      <div class="acciones">
+        <a href="view/auth.html?modo=registro" class="btn btn-dorado">Abrir mi cuenta</a>
+        <a href="view/auth.html?modo=login" class="btn btn-borde">Ya soy cliente</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion-landing" id="productos">
+    <div class="contenedor">
+      <h2>Productos pensados para ti</h2>
+      <p class="subtitulo">Al registrarte recibes estos tres productos listos para usar.</p>
+      <div class="grid-3">
+        <article class="card">
+          <div class="icono">🐖</div>
+          <h3>Cuenta de Ahorros</h3>
+          <p>Guarda tu dinero a mediano y largo plazo y hazlo crecer.</p>
+          <ul><li>Consigna y retira cuando quieras</li><li>1.5% de interés mensual</li><li>Sin sobregiros</li></ul>
+        </article>
+        <article class="card">
+          <div class="icono">💼</div>
+          <h3>Cuenta Corriente</h3>
+          <p>Para tu día a día: nómina, facturas y transferencias frecuentes.</p>
+          <ul><li>Sobregiro de hasta 20%</li><li>Transferencias ilimitadas</li><li>Sin intereses</li></ul>
+        </article>
+        <article class="card">
+          <div class="icono">💳</div>
+          <h3>Tarjeta de Crédito</h3>
+          <p>Compra hoy y paga a cuotas con la tasa según el plazo que elijas.</p>
+          <ul><li>Hasta 2 cuotas sin interés</li><li>3 a 6 cuotas: 1.9% mensual</li><li>7 o más cuotas: 2.3% mensual</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion-landing nosotros" id="nosotros">
+    <div class="contenedor">
+      <h2>Sobre Mi Plata</h2>
+      <p class="subtitulo">Somos un banco digital que cree que manejar tu dinero debe ser simple, transparente y humano.</p>
+      <div class="grid-3">
+        <div class="card"><h3>Misión</h3><p>Acercar servicios financieros claros y seguros a todas las personas, sin complicaciones.</p></div>
+        <div class="card"><h3>Visión</h3><p>Ser el banco digital preferido de Colombia por su confianza y cercanía.</p></div>
+        <div class="card"><div class="cifra">24/7</div><p>Tu banco abierto todos los días, a cualquier hora.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="contenedor">
+      <h2>Empieza hoy con Mi Plata</h2>
+      <a href="view/auth.html?modo=registro" class="btn btn-dorado">Crear mi cuenta gratis</a>
+    </div>
+  </section>
+
+  <footer class="footer" id="contacto">
+    <div class="contenedor">
+      <div class="footer-grid">
+        <div>
+          <h4>Mi Plata S.A.</h4>
+          <p>Banco digital · Medellín, Colombia</p>
+          <p>NIT 900.000.000-0</p>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li>📞 (604) 000 00 00</li>
+            <li>✉️ contacto@miplata.com</li>
+            <li>📍 Calle 10 # 40-20, Medellín</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Síguenos</h4>
+          <div class="redes">
+            <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://x.com" target="_blank" rel="noopener">X</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <p class="copy">© <span data-year></span> Mi Plata. Proyecto académico — todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/models/Transaccion.js"></script>
+  <script src="js/models/cuenta.js"></script>
+  <script src="js/models/CuentaAhorros.js"></script>
+  <script src="js/models/CuentaCorriente.js"></script>
+  <script src="js/models/TarjetaCredito.js"></script>
+  <script src="js/models/Usuario.js"></script>
+  <script src="controllers/AuthController.js"></script>
+  <script src="controllers/BankController.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
